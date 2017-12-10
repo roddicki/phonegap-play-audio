@@ -1,24 +1,31 @@
-# Hello World PhoneGap Template [![bitHound Score][bithound-img]][bithound-url]
+# Hello World PhoneGap audio player [![bitHound Score][bithound-img]][bithound-url]
 
-A PhoneGap Hello World template
+A Phonegap project that is a simple API for playing audio files
 
 ## Usage
+Create a new phonegap project using Phonegap cli or desktop app Replace the www directory with this working repository (complete with audio text files).
 
-#### PhoneGap CLI
+audio-player.js file should be added to index.html 
+	
+	<script type="text/javascript" src="js/audio-player.js"></script>
 
-The hello-world template is the default when you create a new application using the [phonegap-cli][phonegap-cli-url].
+To play audio use the following inside the 'deviceready' function
 
-    phonegap create my-app
+	audio.play("path/to/my/audioFile.mp3");
 
-Create an app using this template specifically:
+The path should be from the www directory
 
-    phonegap create my-app --template hello-world
+To pause audio
+	
+	audio.pause();
 
-To see a list of other available PhoneGap templates:
+(typically these would be triggered by an event listener)
 
-    phonegap template list
+It is possible to use multiple audio files with multiple instances of 
 
-## [config.xml][config-xml]
+	audio.play("path/to/my/audioFile.mp3"); 
+
+without conflicts
 
 #### android-minSdkVersion (Android only)
 
