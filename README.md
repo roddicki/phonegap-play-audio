@@ -3,7 +3,8 @@
 A Phonegap project that is a simple API for playing audio files
 
 ## Usage
-Create a new phonegap project using Phonegap cli or desktop app Replace the www directory with this working repository (complete with audio text files).
+Create a new phonegap project using Phonegap cli or desktop app. 
+Replace the www directory with this working repository (complete with audio text files).
 
 audio-player.js file should be added to index.html 
 	
@@ -27,7 +28,7 @@ It is possible to use multiple audio files with multiple instances of
 
 without conflicts
 
-#### android-minSdkVersion (Android only)
+## android-minSdkVersion (Android only)
 
 Minimum SDK version supported on the target device. Maximum version is blank by default.
 
@@ -35,7 +36,7 @@ This template sets the minimum to `14`.
 
     <preference name="android-minSdkVersion" value="14" />
 
-#### &lt;access ...&gt; (All)
+## &lt;access ...&gt; (All)
 
 This template defaults to wide open access.
 
@@ -47,7 +48,7 @@ For more information on whitelist configuration, see the [Cordova Whitelist Guid
 
 ## [www/index.html][index-html]
 
-#### Content Security Policy (CSP)
+## Content Security Policy (CSP)
 
 The default CSP is similarly open:
 
@@ -75,6 +76,6 @@ Another good resource for generating a good CSP declaration is [CSP is Awesome][
 [cordova-plugin-whitelist-csp]: http://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist#content-security-policy
 [csp-is-awesome]: http://cspisawesome.com
 
-#### Generate icons
+## Generate icons
 
 Generate icons from a 1024px x 1024px master at http://pgicons.abiro.com/
