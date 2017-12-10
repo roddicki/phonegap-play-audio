@@ -22,11 +22,11 @@ To pause audio
 
 (typically these would be triggered by an event listener)
 
-It is possible to use multiple audio files with multiple instances of 
+It is possible to use multiple audio files with multiple instances of audio.play without conflict
 
-	audio.play("path/to/my/audioFile.mp3"); 
+	audio.play("path/to/my/audioFile1.mp3"); 
+	audio.play("path/to/my/audioFile2.mp3"); 
 
-without conflicts
 
 ## android-minSdkVersion (Android only)
 
