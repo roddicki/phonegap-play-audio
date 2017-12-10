@@ -4,7 +4,7 @@ body, html {
   width: 100%;
 }
 
-body {
+body, .custom-background  {
 	margin:0;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
@@ -15,4 +15,13 @@ body {
     background: -o-linear-gradient(#FFF30C, #8FBF1A); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#FFF30C, #8FBF1A); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#FFF30C, #8FBF1A); /* Standard syntax (must be last) */  
+}
+
+/* add styles to the j query mobile classes */
+.rod-btn  {
+    background-color: #54AE3B !important;
+    border-color: #54AE3B !important;
+    text-shadow: none !important;
+    color: white !important;
+    border-radius: 3px;
 }
