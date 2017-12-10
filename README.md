@@ -16,7 +16,7 @@ To play audio use the following inside the 'deviceready' function
 
 The path should to the audioFile should be configured from the www directory
 
-To pause audio
+To pause any audio playing
 	
 	audio.pause();
 
