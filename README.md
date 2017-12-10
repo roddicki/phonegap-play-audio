@@ -4,7 +4,7 @@ A Phonegap project that is a simple API for playing audio files
 
 ## Usage
 Create a new phonegap project using Phonegap cli or desktop app. 
-Replace the www directory with this working repository (complete with audio text files).
+Replace the www directory with this working repository (it includes test audio files).
 
 audio-player.js file should be added to index.html 
 	
