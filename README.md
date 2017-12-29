@@ -24,7 +24,7 @@ To pause any audio playing
 
 (typically these would be triggered by an event listener)
 
-It is possible to use multiple audio files with multiple instances of audio.play without conflict
+It is possible to use multiple audio files with multiple instances of audio.play without conflict. Triggering multiple files to play will result in overlapping audio playback.
 
 	audio.play("path/to/my/audioFile1.mp3"); 
 	audio.play("path/to/my/audioFile2.mp3"); 
