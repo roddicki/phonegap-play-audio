@@ -1,4 +1,4 @@
-# Hello World PhoneGap audio player [![bitHound Score][bithound-img]][bithound-url]
+# PhoneGap audio player 
 
 A Phonegap project that is a simple API for playing audio files on Android and iOS
 
