@@ -13,24 +13,25 @@ var audio = {
 		console.log("\nfileppath used\n" + url);
 	    var mediaObject = new Media(url,
 	            // success callback
-	            function () { console.log("playAudio():Audio Success"); },
+	            function () { console.log("Audio object Success"); },
 	            // error callback
-	            function (err) { console.log("playAudio():Audio Error: " + JSON.stringify(err) ); }
+	            function (err) { console.log("Audio object Error: " + JSON.stringify(err) ); }
 	    );
 	    console.log(JSON.stringify(mediaObject));
 	    return mediaObject;
 	},
 	play: function(filepath) {
-		if (audio.isPlaying) {
+		/*if (audio.isPlaying) {
 			audioObject.pause();
-		};
+		};*/
 		audio.fileName = filepath;
-		audioObject = audio.createAudioObject();
+		var audioObject = audio.createAudioObject();
 		audioObject.play();
 		audio.isPlaying = true;
 	}, 
 	pause: function(){
-		audioObject.pause();
-		audioObject.isPlaying = false;
+		console.log(JSON.stringify(audioObject) );
+		//audioObject.pause();
+		//audioObject.isPlaying = false;
 	}
 };

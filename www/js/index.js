@@ -4,11 +4,23 @@ document.addEventListener('deviceready', function() {
     
    	//event listeners for 'play' and 'pause' buttons
     document.getElementById("play-btn-one").addEventListener("click", function(){
-        audio.play("audio/airloom_intro.mp3");
+        audio.play("audio/abcd.mp3");
     });
 
     document.getElementById("play-btn-two").addEventListener("click", function(){
         audio.play("audio/white-christmas.mp3");
+    });
+
+    document.getElementById("play-btn-three").addEventListener("click", function(){
+        audio.play("audio/alphaOmega.mp3");
+    });
+
+    document.getElementById("play-btn-four").addEventListener("click", function(){
+        audio.play("audio/xyz.mp3");
+    });
+
+    document.getElementById("play-btn-five").addEventListener("click", function(){
+        audio.play("audio/1234.mp3");
     });
 
     //event listener for 'pause' button
