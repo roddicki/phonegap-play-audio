@@ -1,44 +1,52 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />   
-
-
-<meta http-equiv="Content-Security-Policy" content="default-src gap: file: tel: *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src 'self' 'unsafe-inline' *">
-
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
-    <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet"  />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Play audio</title>
+    <title>audio player</title>
 </head>
 
 <body>
-    <!-- page one -->
-    <div class="custom-background" data-role="page" data-theme="a" id="pageone">
-        <div data-role="main" class="ui-content">
-            <h3>Play locally stored mp3</h3>
-            <a id="play-btn-one"  class="ui-btn" href="#">Play abd Audio</a>
-            <a id="play-btn-two"  class="ui-btn" href="#">Play white christmas Audio</a>
-            <a id="play-btn-three"  class="ui-btn" href="#">Play alpha omega Audio</a>
-            <a id="play-btn-four"  class="ui-btn" href="#">Play xyz Audio</a>
-            <a id="play-btn-five"  class="ui-btn" href="#">Play 123 Audio</a>
-            <!-- <a id="pauseBtn"  class="ui-btn" href="#">Pause</a> -->
-        </div>
-    </div> 
-    <!-- page one -->
+    <div class="app">
+        <h1>Audio player</h1>
+        <p>This player demos a simple api created from the rather convoluted and tricky to use cordova-plugin-media</p>
 
-    
+        <h3>first audio</h3>
+        <h2><a href="#" id="play-btn-one">play oboe mp3</a><h2>
+        <h2><a href="#" id="pause-one">pause</a><h2>
+        <h2><a href="#" id="get-duration-one">get duration</a><h2>
+        <h3 id="duration-one"></h3>
+        <h2><a href="#" id="seek">Seek to 50 secs and play</a></h2>
+        <h2><a href="#" id="position-one">Get Current Position</a><h2>
+        <h3 id="position-one-result"></h3>
+
+        <h3>second audio</h3>
+        <h2><a href="#" id="play-btn-two">play drums mp3</a><h2>
+        <h2><a href="#" id="pause-two">pause</a><h2>
+        <h2><a href="#" id="position-two">Get Current Position</a><h2>
+        <h3 id="position-two-result"></h3>
+    </div>
     <script type="text/javascript" src="cordova.js"></script>
-
     <script type="text/javascript" src="js/audio-player.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    
 </body>
 
 </html>
