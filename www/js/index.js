@@ -1,6 +1,7 @@
 document.addEventListener('deviceready', function() {
     /* Javascript here... */
     console.log('\n-------------\nDEVICE READY');
+    document.getElementById("deviceready").innerHTML = "device ready";
     
    	//event listeners for 'play' and 'pause' buttons
     //play audio file
