@@ -32,14 +32,14 @@ var audio = {
 	},
 	getObject: function(filepath) {
 		var audioObject;
-		if (!(("/"+filepath) in audio.objectList)) {
+		if ( !((audio.getDevicePath() + filepath) in audio.objectList) ) {
 			//object in objectList doesn't exist so create audioOject
 			audioObject = audio.createAudioObject(filepath);
 			audio.objectList[audioObject.src] = audioObject; //add to objectList
 			console.log(JSON.stringify(audio.objectList));
 		} else {
 			//object exists so find it and return it
-			audioObject = audio.objectList["/"+filepath];
+			audioObject = audio.objectList[audio.getDevicePath() + filepath]
 		};
 		return audioObject;
 	},
@@ -63,15 +63,15 @@ var audio = {
 		};	
 	}, 
 	pause: function(filepath) {
-		var isPlayingIndex = audio.isPlaying.indexOf(filepath);
-		console.log("audio.isCurrentlyPlaying: " + audio.isCurrentlyPlaying(filepath)); 
+		console.log("pause clicked - audio.isCurrentlyPlaying: " + audio.isCurrentlyPlaying(filepath)); 
 		//if audio is playing
 		if (audio.isCurrentlyPlaying(filepath)) {
 			//is playing so find object and pause
-			var audioObject = audio.objectList["/"+filepath];
+			var audioObject = audio.objectList[audio.getDevicePath() + filepath]; //search objectList for object
 			console.log(JSON.stringify(audioObject.src) + " is playing and will be paused" + "\n object: \n" + JSON.stringify(audioObject));
 			audioObject.pause();
 			//delete from isPlaying list
+			var isPlayingIndex = audio.isPlaying.indexOf(filepath);
 			audio.deleteFromisPlaying(isPlayingIndex); 
 		};
 	},
