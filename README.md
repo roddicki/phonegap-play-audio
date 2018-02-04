@@ -8,6 +8,7 @@ https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-media/index.h
 The api takes care of instantiating a media object for each audio file, keeping track of which audio file is playing and constructing filepaths to the cordova / phonegap www folder.
 
 This allows an audio file to play using the familiar and simple HTML5 / JavaScript:
+	
 	audio.play("path/to/my/audioFile.mp3");
 
 ## Usage
@@ -56,7 +57,7 @@ The path to the audioFile should be configured from the www directory
 ## audio.getCurrentPosition
 To return the current position of an audio file that is playing add the following inside the 'deviceready' function
 
-	audio.getCurrentPosition("path/to/my/audioFile.mp3", milliseconds);
+	audio.getCurrentPosition("path/to/my/audioFile.mp3");
 
 The path to the audioFile should be configured from the www directory.
 If the audio is not playing 0 will be returned
