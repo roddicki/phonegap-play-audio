@@ -2,7 +2,13 @@
 
 A Phonegap project that is a simple API for playing audio files on Android and iOS
 
-This projects aims to give some simple HTML5 style functionality to the audio playback for the phonegap/cordova media plugin https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-media/index.html
+This projects aims to give some simple HTML5 style functionality to the audio playback for the phonegap/cordova media plugin.
+https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-media/index.html
+
+The api takes care of instantiating a media object for each audio file, keeping track of which audio file is playing and constructing filepaths to the cordova / phonegap www folder.
+
+This allows an audio file to play using the familiar and simple HTML5 / JavaScript:
+	audio.play("path/to/my/audioFile.mp3");
 
 ## Usage
 Create a new phonegap project using Phonegap cli or desktop app. 
@@ -52,7 +58,7 @@ To return the current position of an audio file that is playing add the followin
 
 	audio.getCurrentPosition("path/to/my/audioFile.mp3", milliseconds);
 
-The path to the audioFile should be configured from the www directory
+The path to the audioFile should be configured from the www directory.
 If the audio is not playing 0 will be returned
 
 ## android-minSdkVersion (Android only)
