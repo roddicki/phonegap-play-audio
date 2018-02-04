@@ -6,21 +6,18 @@ This projects aims to give some simple HTML5 style functionality to the audio pl
 
 ## Usage
 Create a new phonegap project using Phonegap cli or desktop app. 
-Replace the www directory with this working repository (it includes test audio files).
+Replace the www directory with this demo / working repository (it includes test audio files).
 
 audio-player.js file should be added to index.html 
 	
 	<script type="text/javascript" src="js/audio-player.js"></script>
 
+##audio.play
 To play audio use the following inside the 'deviceready' function
 
 	audio.play("path/to/my/audioFile.mp3");
 
-The path should to the audioFile should be configured from the www directory
-
-To pause any audio playing
-	
-	audio.pause();
+The path to the audioFile should be configured from the www directory
 
 (typically these would be triggered by an event listener)
 
@@ -29,6 +26,34 @@ It is possible to use multiple audio files with multiple instances of audio.play
 	audio.play("path/to/my/audioFile1.mp3"); 
 	audio.play("path/to/my/audioFile2.mp3"); 
 
+##audio.pause
+To pause an audio file use the following inside the 'deviceready' function
+
+	audio.pause("path/to/my/audioFile.mp3");
+
+The path to the audioFile should be configured from the www directory
+
+##audio.getDuration
+To get the duration of an audio file add the following inside the 'deviceready' function
+
+	audio.getDuration("path/to/my/audioFile.mp3");
+
+The path to the audioFile should be configured from the www directory
+
+##audio.seekTo
+To go to a specific point in an audio file add the following inside the 'deviceready' function
+
+	audio.seekTo("path/to/my/audioFile.mp3", milliseconds);
+
+The path to the audioFile should be configured from the www directory
+
+##audio.getCurrentPosition
+To return the current position of an audio file that is playing add the following inside the 'deviceready' function
+
+	audio.getCurrentPosition("path/to/my/audioFile.mp3", milliseconds);
+
+The path to the audioFile should be configured from the www directory
+If the audio is not playing 0 will be returned
 
 ## android-minSdkVersion (Android only)
 
