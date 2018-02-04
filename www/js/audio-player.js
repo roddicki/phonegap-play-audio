@@ -3,9 +3,15 @@ var audio = {
 	objectList: {},
 	currPosition: 0,
 	getDevicePath: function() {
-	    var path = window.location.pathname;
+	    var path;
+	    if (platform == "ios") {
+	        var path = "cdvfile://localhost/bundle/www/";
+	    } else if (platform == "android") {
+	        var path = "file:///android_asset/www/";
+	    };
+	    /*path = window.location.pathname;
 	    var sizefilename = path.length - (path.lastIndexOf("/")+1);
-	    path = path.substr( path, path.length - sizefilename );
+	    path = path.substr( path, path.length - sizefilename );*/
 	    return path;
 	},
 	createAudioObject: function(filepath) {
