@@ -12,7 +12,7 @@ audio-player.js file should be added to index.html
 	
 	<script type="text/javascript" src="js/audio-player.js"></script>
 
-##audio.play
+## audio.play
 To play audio use the following inside the 'deviceready' function
 
 	audio.play("path/to/my/audioFile.mp3");
@@ -26,28 +26,28 @@ It is possible to use multiple audio files with multiple instances of audio.play
 	audio.play("path/to/my/audioFile1.mp3"); 
 	audio.play("path/to/my/audioFile2.mp3"); 
 
-##audio.pause
+## audio.pause
 To pause an audio file use the following inside the 'deviceready' function
 
 	audio.pause("path/to/my/audioFile.mp3");
 
 The path to the audioFile should be configured from the www directory
 
-##audio.getDuration
+## audio.getDuration
 To get the duration of an audio file add the following inside the 'deviceready' function
 
 	audio.getDuration("path/to/my/audioFile.mp3");
 
 The path to the audioFile should be configured from the www directory
 
-##audio.seekTo
+## audio.seekTo
 To go to a specific point in an audio file add the following inside the 'deviceready' function
 
 	audio.seekTo("path/to/my/audioFile.mp3", milliseconds);
 
 The path to the audioFile should be configured from the www directory
 
-##audio.getCurrentPosition
+## audio.getCurrentPosition
 To return the current position of an audio file that is playing add the following inside the 'deviceready' function
 
 	audio.getCurrentPosition("path/to/my/audioFile.mp3", milliseconds);
