@@ -1,6 +1,6 @@
 # PhoneGap / Cordova audio player 
 
-A PhoneGap / Cordovaproject that is a simple API for playing audio files on Android and iOS
+A PhoneGap / Cordova project that is a simple API for playing audio files on Android and iOS
 
 This projects aims to give some simple HTML5 style functionality to the audio playback for the phonegap/cordova media plugin.
 https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-media/index.html
