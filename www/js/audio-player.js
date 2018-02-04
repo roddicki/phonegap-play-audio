@@ -4,6 +4,8 @@ var audio = {
 	currPosition: 0,
 	getDevicePath: function() {
 	    var path;
+	    var platform = device.platform;
+    	platform = platform.toLowerCase();
 	    if (platform == "ios") {
 	        var path = "cdvfile://localhost/bundle/www/";
 	    } else if (platform == "android") {
